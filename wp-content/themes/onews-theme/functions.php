@@ -29,6 +29,15 @@ if (!function_exists('onews_setup')) :
         register_nav_menus([
             'footer' => 'Menu de liens dans le footer'
         ]);
+
+        /*
+		 * Enable support for Post Thumbnails on posts and pages.
+		 *
+		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+		 */
+		add_theme_support( 'post-thumbnails' );
+        set_post_thumbnail_size( 200, 500 );
+        
     }
 endif;
 // Ajout d'une action au Hook 'after_setup_theme'

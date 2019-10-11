@@ -17,6 +17,7 @@
               <?php $date = new DateTime(strtotime(get_the_date())); ?>
               <time datetime="<?= $date->format('Y-m-d'); ?>">le <?= get_the_date(); ?></time>
             </div>
+            <?php the_post_thumbnail(); ?>
             <p><?php the_excerpt(); ?></p>
             <a href="<?php the_permalink(); ?>" class="post__link">Continue reading</a>
           </article>
